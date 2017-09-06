@@ -1,0 +1,30 @@
+$c: "skills";
+
+.#{$c} {
+    text-align: center;
+
+    + .#{$c} {
+
+    }
+
+    @media(min-width: $breakpoint--sm) {
+        text-align: left;
+    }
+}
+
+.#{$c}__list {
+    @include list-unstyled;
+}
+
+.#{$c}__list__item {
+    font-family: $secondary-font--italic;
+    font-size: 14px;
+
+    @media(min-width: $breakpoint--sm) {
+        padding-right: 10px;
+    }
+
+    @media (min-width: $breakpoint--md) {
+        font-size: 16px;
+    }
+}

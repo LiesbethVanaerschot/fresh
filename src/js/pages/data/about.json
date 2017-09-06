@@ -1,0 +1,46 @@
+{
+  "title": "About",
+  "text": "I am a 28 year old all-round creative based in Antwerp, Belgium. After my education as an interior designer, I have been developing a passion for the web.",
+  "skills": {
+    "title": "Skills",
+    "design" : {
+      "title": "design",
+      "items": {
+        "1": "Illustrator",
+        "2": "Photoshop",
+        "3": "Sketch",
+        "4": "InDesign",
+        "5": "Sketching"
+      }
+    },
+    "dev": {
+      "title": "development",
+      "items": {
+        "1": "HTML5",
+        "2": "CSS - CSS3 - Sass",
+        "3": "Flexbox - Bootstrap",
+        "4": "Gulp",
+        "5": "JavaScript - jQuery",
+        "6": "React - Angular",
+        "7": "PHP - Laravel",
+        "8": "Handlebars",
+        "9": "Blade - Twig - Nunjucks",
+        "10": "And a lot more"
+      }
+    }
+  },
+  "extra": {
+    "title": "Extra's",
+    "icons": {
+      "1":"assets/images/icons/travel.svg",
+      "2":"assets/images/icons/music.svg",
+      "3":"assets/images/icons/plant.svg",
+      "4":"assets/images/icons/coffee.svg"
+    }
+  },
+  "resume": {
+    "text": "Would you like to see my complete resumé?",
+    "download": "Download it",
+    "cta": "here"
+  }
+}

@@ -1,0 +1,47 @@
+$l: "flex";
+
+.#{$l} {
+    display: flex;
+
+    &--col {
+        flex-direction: column;
+    }
+
+    &--row {
+        flex-direction: row;
+    }
+
+    &--row-sm {
+        flex-direction: column;
+
+        @media (min-width: $breakpoint--sm) {
+            flex-direction: row;
+        }
+    }
+
+    &--row-md {
+        flex-direction: column;
+
+        @media (min-width: $breakpoint--md) {
+            flex-direction: row;
+        }
+    }
+}
+
+@for $i from 1 through 12 {
+    .#{$l}__col-sm--#{$i} {
+        width: 100%;
+
+        @media (min-width: $breakpoint--sm) {
+            width: calc((100% / 12) * #{$i});
+        }
+    }
+
+    .#{$l}__col-md--#{$i} {
+        width: 100%;
+
+        @media (min-width: $breakpoint--md) {
+            width: calc((100% / 12) * #{$i});
+        }
+    }
+}

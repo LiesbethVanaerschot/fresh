@@ -1,6 +1,7 @@
 const
     getArg = require('./lib/getArg'),
-    destFolder = getArg('--build') ? './build' : './public';
+    destFolder = getArg('--build') ? './build' : './public',
+    requireDir = require('require-dir');
 
 module.exports = {
     'root': {
@@ -11,13 +12,19 @@ module.exports = {
     'tasks': {
         'browserSync': {},
         'static': {},
+        'fonts': {},
         'webpack': {
+            'babel': {
+                'presets': [['es2015', { 'modules': false }]],
+                'plugins': [
+                    'transform-react-jsx'
+                ]
+            },
             'entries': {
                 'app': ['./app.js']
             }
         },
         'css': {},
-        'nunjucks': {},
         'images': {},
         'svgsprite': {},
         'production': {},

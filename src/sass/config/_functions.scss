@@ -14,7 +14,7 @@
     @return null;
 }
 
-@function get-brand-color($key: 'primary', $shade: 'base') {
+@function get-brand-color($key: 'groen', $shade: 'base') {
     @return get-color($colors-brand, $key, $shade);
 }
 

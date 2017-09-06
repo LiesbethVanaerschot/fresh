@@ -1,15 +1,38 @@
 $colors-brand: (
-    primary: (
-        base: #00b9d4,
-        dark: darken(#00b9d4, 10%)
+    groen: (
+            lightest: #c2ddbf,
+            light: #85BD7E,
+            lighter: #7CC471,
+            base: #2F9754,
+            darker: #1A8850,
+            dark: #197A48,
+            darkest: #135E38
+    ),
+    munt: (
+            lighter: #57BD7F,
+            base: #2F9575
+    ),
+    mos: (
+            lighter: #99B279,
+            base: #91A43A
+    ),
+    blauw: (
+            base: #235672,
+            dark: #172E57
+    ),
+    roos: (
+            base: #f5d1c9
     )
 );
 
 $colors-gray: (
     primary: (
-        light: #eee,
-        base: #999,
-        dark: #333
+        lightest: #fff,
+        light: #eaebec,
+        base: #98a0a5,
+        darker: #363d42,
+        dark: #272c2f,
+        darkest: #000
     )
 );
 
@@ -31,3 +54,6 @@ $colors-status: (
         base: #a94442
     )
 );
+
+$bg-color:      get-brand-color('roos');
+$text-color:    get-gray-color('dark');

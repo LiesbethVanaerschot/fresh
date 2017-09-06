@@ -1,0 +1,134 @@
+/* Styling main header
+   ========================================================================== */
+
+/* General
+   ========================================================================== */
+
+$b : 'mainheader';
+
+.#{$b} {
+    position: fixed;
+    z-index: 1000;
+
+    height: 50px;
+    padding: 10px 20px;
+    width: 100%;
+
+    background-color: transparent;
+
+    transition: all 1s ease-in-out;
+
+    &.bgfade {
+        height: 40px;
+        padding: 5px 20px;
+
+        background-color: rgba(get-gray-color('light'), .7);
+
+        .#{$b}__img {
+            width: 20px;
+
+            transition: width 1s ease-in-out;
+
+            @media (min-width: $breakpoint--sm) {
+                width: 25px;
+            }
+        }
+
+        .#{$b}__link {
+            padding: 4px 6px;
+
+            transition: padding 1s ease-in-out;
+
+            @media (min-width: $breakpoint--sm) {
+                padding: 6px 10px;
+            }
+        }
+    }
+
+    @media (min-width: $breakpoint--sm) {
+        height: 65px;
+        padding: 14px 20px;
+    }
+}
+
+.#{$b}__logo {
+    display: inline-block;
+    width: auto;
+    float: left;
+}
+
+.#{$b}__img {
+    width: 25px;
+
+    @media (min-width: $breakpoint--sm) {
+        width: 30px;
+    }
+}
+
+.#{$b}__nav {
+    float: right;
+}
+
+.#{$b}__link {
+    position: relative;
+
+    padding: 6px;
+    display: inline-block;
+
+    font-family: $primary-font--semibold;
+    text-transform: uppercase;
+    font-size: 12px;
+    color: get-gray-color('darker');
+
+    &:nth-child(3) {
+        padding-right: 0;
+
+        &:after {
+            left: calc(50% + 9px);
+        }
+    }
+
+    &:after {
+        content: "";
+
+        position: absolute;
+        left: 50%;
+        bottom: 8px;
+
+        display: block;
+        width: 40px;
+        height: 0;
+
+        background-color: get-gray-color('lightest');
+
+        transform: translate3d(-50%,0, 0);
+
+        transition: all .3s ease-in-out;
+    }
+
+    &.active {
+        &:after {
+            height: 4px;
+            bottom: 4px;
+            background-color: get-gray-color('dark');
+        }
+    }
+
+    @media (min-width: $breakpoint--sm) {
+        font-size: 14px;
+        padding: 7.5px 18px;
+    }
+
+    @media (min-width: $breakpoint--md) {
+        &:hover {
+
+            color: get-gray-color('dark');
+            text-decoration: none;
+
+            &:after {
+                height: 4px;
+                bottom: 4px;
+            }
+        }
+    }
+}

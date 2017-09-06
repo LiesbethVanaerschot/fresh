@@ -17,6 +17,8 @@ body {
     font-size: $font-size-base;
     line-height: $line-height-base;
     color: $text-color;
+
+    background-color: get-brand-color('roos');
 }
 
 ::-moz-selection {
@@ -31,14 +33,17 @@ body {
     background-color: get-brand-color();
 }
 
+main {
+    overflow-x: hidden;
+}
+
 a {
     transition: color 0.2s ease-out;
     text-decoration: none;
-    color: get-brand-color();
+    color: get-gray-color('darker');
 
     &:hover, &:focus {
-        color: get-brand-color('primary', 'dark');
-        text-decoration: underline;
+        color: get-gray-color('dark');
     }
 
     &.link-unstyled {
@@ -58,4 +63,46 @@ button {
     margin: 0;
     border: 0 none;
     cursor: pointer;
+}
+
+.pattern-fixed {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -4;
+
+    min-width: 100%;
+    width: 100vw;
+    min-height: 100%;
+    height: 100vh;
+
+    background-image: url('../images/hexpattern.svg');
+    background-size: 20px;
+
+    opacity: 0.9;
+}
+
+.container {
+    position: relative;
+
+    max-width: 768px;
+    width: 100% !important;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+
+    &--small {
+        @extend .container;
+
+        max-width: 500px;
+    }
+
+    @media (min-width: $breakpoint--md) {
+        max-width: 1200px;
+
+        &--small {
+            max-width: 600px;
+        }
+    }
 }

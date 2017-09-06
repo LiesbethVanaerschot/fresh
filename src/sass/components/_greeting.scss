@@ -1,0 +1,87 @@
+/* Homepage - greeting
+   ========================================================================== */
+
+
+/* General
+   ========================================================================== */
+
+$b : 'greeting';
+
+.#{$b} {
+    position: relative;
+
+    height: calc(100vh - 7.5rem);
+    min-height: 100%;
+
+    @media (min-width: $breakpoint--sm) {
+        height: calc(100vh - 9.5rem);
+    }
+
+    @media (min-width: $breakpoint--md) {
+        height: calc(100vh - 15.5rem);
+    }
+
+}
+
+.#{$b}__content {
+    position: absolute;
+    top: calc(20% + 50px);
+    left: 50%;
+
+    opacity: 1;
+
+    transform: translate3D(-50%, -20%, 0);
+
+    transition: all 1s ease-in-out;
+
+    &.fadeout {
+        opacity: 0;
+    }
+
+    @media (min-width: $breakpoint--sm) {
+        top: 50%;
+
+        transform: translate3D(-50%, -50%, 0);
+    }
+}
+
+.#{$b}__title {
+    margin: 0;
+
+    color: get-gray-color('lightest');
+    font-family: $secondary-font--bolditalic;
+    font-size: 8.5rem;
+    line-height: .8;
+
+    transition: all .3s ease-in-out;
+
+    @media (min-width: $breakpoint--sm) {
+        font-size: 12rem;
+    }
+
+    @media (min-width: $breakpoint--md) {
+        font-size: 21rem;
+    }
+}
+
+.#{$b}__text {
+    margin: 1rem 0 0 0;
+
+    font-family: $secondary-font--italic;
+    font-size: 1.5rem;
+    text-shadow: 0 0 .4rem rgba(get-gray-color('lightest'),.9);
+    //color: $white;
+
+    transition: all .3s ease-in-out;
+
+    @media (min-width: $breakpoint--sm) {
+        margin: .5rem 0 0 0;
+
+        font-size: 1.6rem;
+        color: $text-color;
+    }
+
+    @media (min-width: $breakpoint--md) {
+        font-size: 1.8rem;
+    }
+}

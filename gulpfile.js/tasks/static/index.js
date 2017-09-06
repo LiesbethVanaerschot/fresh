@@ -20,3 +20,4 @@ const
 
 gulp.task('static', staticTask);
 module.exports = staticTask;
+
