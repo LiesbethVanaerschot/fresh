@@ -3,15 +3,14 @@ import KUTE from 'kute.js';
 require('kute.js/kute-svg');
 
 const svgStyle = {
-    enableBackground:"new 0 0 400 500"
+    enableBackground: 'new 0 0 400 500'
 };
 
 class RBOne extends Component {
-
     componentDidMount() {
-        var tween = KUTE.fromTo(this.refs.RB1, {path: this.refs.RB1 }, { path: this.refs.RB1_End }, { easing: 'physicsBackInOut',
-            yoyo: true,  repeat: 1, duration: 3000, morphPrecision: 5,
-            morphIndex: 1998, complete:function(){
+        let tween = KUTE.fromTo(this.refs.RB1, {path: this.refs.RB1 }, { path: this.refs.RB1_End }, { easing: 'physicsBackInOut',
+            yoyo: true, repeat: 1, duration: 3000, morphPrecision: 5,
+            morphIndex: 1998, complete: function() {
                 tween.start();
             }
         }).start();
@@ -84,7 +83,7 @@ class RBOne extends Component {
 	C88.1,105.9,66.7,171.8,52.3,237c6.8-44,11.9-55.8,16.7-72.6c12.4-36.6,26.7-74.1,48.8-103.9c21.5-26.5,38.8-38.2,46.7-42.8
 	C181.9,7.8,236.7-5,233.6,3.8z"/>
             </svg>
-        )
+        );
     }
 }
 

@@ -2,16 +2,15 @@ import React, { Component } from 'react';
 import data from './../pages/data/about.json';
 
 class Skills extends Component {
-    render () {
-
+    render() {
         let design = Object.keys(data.skills.design.items).map(function(key) {
-            return <li className="skills__list__item" key={key} value={key}>{data.skills.design.items[key]}</li>
+            return <li className="skills__list__item" key={key} value={key}>{data.skills.design.items[key]}</li>;
         });
 
         let devOne = Object.keys(data.skills.dev.items).map(function(key) {
             let items;
 
-            if(key < 6) {
+            if (key < 6) {
                 items = <div className="skills__list__item" key={key} value={key}>{data.skills.dev.items[key]}</div>;
             }
 
@@ -20,7 +19,7 @@ class Skills extends Component {
 
         let devTwo = Object.keys(data.skills.dev.items).map(function(key) {
             let item;
-            if(key > 5) {
+            if (key > 5) {
                 item = <div className="skills__list__item" key={key} value={key}>{data.skills.dev.items[key]}</div>;
             }
 
@@ -54,7 +53,7 @@ class Skills extends Component {
                     </div>
                 </div>
             </div>
-        )
+        );
     }
 }
 

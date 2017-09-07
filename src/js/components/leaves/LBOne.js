@@ -3,15 +3,14 @@ import KUTE from 'kute.js';
 require('kute.js/kute-svg');
 
 const svgStyle = {
-    enableBackground:"new 0 0 400 500"
+    enableBackground: 'new 0 0 400 500'
 };
 
 class LBOne extends Component {
-
     componentDidMount() {
-        var tween = KUTE.fromTo(this.refs.LB1, {path: this.refs.LB1 }, { path: this.refs.LB1_End }, { easing: 'physicsBackInOut',
-            yoyo: true,  repeat: 1, duration: 2000, morphPrecision: 5,
-            morphIndex: 1998,complete:function(){
+        let tween = KUTE.fromTo(this.refs.LB1, {path: this.refs.LB1 }, { path: this.refs.LB1_End }, { easing: 'physicsBackInOut',
+            yoyo: true, repeat: 1, duration: 2000, morphPrecision: 5,
+            morphIndex: 1998, complete: function() {
                 tween.start();
             }
         }).start();
@@ -19,8 +18,7 @@ class LBOne extends Component {
 
     render() {
         return (
-            <svg x="0px" y="0px" className="LB1_svg"
-                 width="400px" height="500px" viewBox="0 0 221.6 333.1" style={svgStyle}>
+            <svg x="0px" y="0px" className="LB1_svg" width="400px" height="500px" viewBox="0 0 221.6 333.1" style={svgStyle}>
                 <path ref="LB1" className="LB1" d="M216.9,61.1c-27.6,6.4-56.6,19.1-77,24.9
 	c26.4-13.8,52.1-25,80.5-34.4c-26.3,5.7-43.6,12.4-68,23.2c20.4-16.5,45.6-16.6,69.2-30.6c-30,11.7-47.6,13.7-65.1,22.7
 	c5.7-8.5,48.6-17.8,56.5-25.3c-9.3,2.3-12.6,6.5-46.1,14.6c2.8-2.4,24.4-11.1,40.5-16.6c-14.9,2.6-25.4,6.4-34.7,10.8
@@ -85,7 +83,7 @@ class LBOne extends Component {
 	c17.2-45.8,62.4-102.6,111-153c-34.5,31.4-41.9,42.7-53.8,56.6c-24.9,32-49.3,66.2-62.5,102.8c-10.7,34.1-10.9,56.1-10.3,65.6
 	C55.3,284.9,75.8,340.2,81.8,332.4z"/>
             </svg>
-        )
+        );
     }
 }
 

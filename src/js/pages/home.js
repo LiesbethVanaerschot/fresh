@@ -3,12 +3,12 @@ import data from './data/home.json';
 import Greeting from '../components/greeting';
 
 class Home extends Component {
-    render () {
+    render() {
         return (
             <div className="container">
                 <Greeting />
             </div>
-        )
+        );
     }
 }
 

@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 // require('kute.js/kute-svg');
 
 const svgStyle = {
-    enableBackground:"new 0 0 188.5 201.4"
+    enableBackground: 'new 0 0 188.5 201.4'
 };
 
 class ROOne extends Component {
@@ -11,9 +11,9 @@ class ROOne extends Component {
 
     }
 
-    render () {
+    render() {
         return (
-            <svg className="RO2_svg" version="1.1" id="Layer_1"  x="0px" y="0px" width="188.5px" height="201.4px" viewBox="0 0 188.5 201.4" style={svgStyle} >
+            <svg className="RO2_svg" version="1.1" id="Layer_1" x="0px" y="0px" width="188.5px" height="201.4px" viewBox="0 0 188.5 201.4" style={svgStyle} >
                 <path ref="RO2" className="RO2" d="M174.5,54.1c-5-1.4-14.7,2.9-19.2,4.3c-8,2.5-15.5,6.1-23.7,7.9
 	            c-3.1,0.7-14.4,3.8-14.5-1.8c-0.1-4.5,13.2-5.9,15.9-6.3c8.9-1.5,20.3-5.3,27.4-10.9c4.1-3.2,3.2-4.4,0-9c-1.6-2.4-5.1-9.7-7.6-11
 	            c-3.2-1.6-2.3-1.3-5.8,0.6c-10,5.5-16.9,16.8-27.3,21.7c-2.8,1.3-4.6,3-3.4-1.1c1.8-6.2,14.1-13.5,19.1-16.9
@@ -75,7 +75,7 @@ class ROOne extends Component {
                 <path ref="RO2_root" className="RO2_root" d="M184.7,201.4c-31.1-48.5-64.5-92.3-108.4-129.9c45,36.5,79.7,79.6,112.2,127.4
 	            C187.2,199.7,185.9,200.5,184.7,201.4z"/>
             </svg>
-        )
+        );
     }
 }
 

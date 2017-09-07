@@ -18,7 +18,7 @@ html, body {
     * {
         font-size: 16px;
 
-        @media(min-width: $breakpoint--md) {
+        @media (min-width: $breakpoint--md) {
             font-size: 18px;
         }
     }
@@ -35,7 +35,7 @@ h2 {
     text-align: center;
     font-size: 4rem;
 
-    &:after {
+    &::after {
         content: '';
 
         position: absolute;

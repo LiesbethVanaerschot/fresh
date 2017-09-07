@@ -1,0 +1,72 @@
+$o: 'svg-icon';
+
+.#{$o} {
+    #lines {
+        * {
+            stroke-dasharray: 1000;
+            stroke-dashoffset: 1000;
+
+            transition: stroke-dashoffset 2.5s ease-in-out;
+            transition-delay: 1s;
+        }
+    }
+
+    #backgrounds {
+        opacity: 0;
+        transition: opacity 1s ease-in-out;
+        transition-delay: 1s;
+    }
+
+    //&#plant {
+    //    #lines {
+    //        * {
+    //            transition-delay: 1s;
+    //        }
+    //    }
+    //}
+    //
+    &#coffee {
+        #heat_1 {
+            * {
+                stroke-dasharray: 1000;
+                stroke-dashoffset: 1000;
+                opacity: 0;
+
+                transition: stroke-dashoffset 2s ease-in-out, opacity .3s ease-in-out;
+                transition-delay: 2s;
+            }
+        }
+    }
+    //
+    //&#music {
+    //    #lines {
+    //        * {
+    //            transition-delay: 2s;
+    //        }
+    //    }
+    //}
+
+}
+
+.show {
+    .#{$o} {
+        #lines {
+            * {
+                stroke-dashoffset: 0;
+            }
+        }
+
+        #backgrounds {
+            opacity: 1;
+        }
+
+        &#coffee {
+            #heat_1 {
+                * {
+                    stroke-dashoffset: 0;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}

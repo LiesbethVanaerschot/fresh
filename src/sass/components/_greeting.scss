@@ -1,11 +1,10 @@
 /* Homepage - greeting
    ========================================================================== */
 
-
 /* General
    ========================================================================== */
 
-$b : 'greeting';
+$b: 'greeting';
 
 .#{$b} {
     position: relative;
@@ -23,14 +22,14 @@ $b : 'greeting';
 
 }
 
-.#{$b}__content {
+.#{$b}Content {
     position: absolute;
     top: calc(20% + 50px);
     left: 50%;
 
     opacity: 1;
 
-    transform: translate3D(-50%, -20%, 0);
+    transform: translate3d(-50%, -20%, 0);
 
     transition: all 1s ease-in-out;
 
@@ -41,7 +40,7 @@ $b : 'greeting';
     @media (min-width: $breakpoint--sm) {
         top: 50%;
 
-        transform: translate3D(-50%, -50%, 0);
+        transform: translate3d(-50%, -50%, 0);
     }
 }
 
@@ -69,7 +68,7 @@ $b : 'greeting';
 
     font-family: $secondary-font--italic;
     font-size: 1.5rem;
-    text-shadow: 0 0 .4rem rgba(get-gray-color('lightest'),.9);
+    text-shadow: 0 0 .4rem rgba(get-gray-color('lightest'), .9);
     //color: $white;
 
     transition: all .3s ease-in-out;

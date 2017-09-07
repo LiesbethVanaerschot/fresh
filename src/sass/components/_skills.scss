@@ -1,13 +1,9 @@
-$c: "skills";
+$c: 'skills';
 
 .#{$c} {
     text-align: center;
 
-    + .#{$c} {
-
-    }
-
-    @media(min-width: $breakpoint--sm) {
+    @media (min-width: $breakpoint--sm) {
         text-align: left;
     }
 }
@@ -20,7 +16,7 @@ $c: "skills";
     font-family: $secondary-font--italic;
     font-size: 14px;
 
-    @media(min-width: $breakpoint--sm) {
+    @media (min-width: $breakpoint--sm) {
         padding-right: 10px;
     }
 

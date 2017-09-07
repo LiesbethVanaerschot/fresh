@@ -38,7 +38,7 @@ main {
 }
 
 a {
-    transition: color 0.2s ease-out;
+    transition: color .2s ease-out;
     text-decoration: none;
     color: get-gray-color('darker');
 
@@ -81,7 +81,7 @@ button {
     background-image: url('../images/hexpattern.svg');
     background-size: 20px;
 
-    opacity: 0.9;
+    opacity: .9;
 }
 
 .container {

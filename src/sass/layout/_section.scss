@@ -1,4 +1,4 @@
-$l: "section";
+$l: 'section';
 
 .#{$l}--triangle {
     position: relative;
@@ -6,8 +6,8 @@ $l: "section";
     max-width: 3000px;
     margin: 110px auto 350px auto;
 
-    &:before,
-    &:after {
+    &::before,
+    &::after {
         content: '';
 
         position: absolute;
@@ -20,17 +20,16 @@ $l: "section";
         border-left: 1500px solid transparent;
         border-right: 1500px solid transparent;
 
-
-        transform: translate3d(-50%,0,0);
+        transform: translate3d(-50%, 0, 0);
     }
 
-    &:before {
+    &::before {
         top: -120px;
 
         border-bottom: 120px solid get-gray-color('lightest');
     }
 
-    &:after {
+    &::after {
         bottom: -120px;
 
         border-top: 120px solid get-gray-color('lightest');

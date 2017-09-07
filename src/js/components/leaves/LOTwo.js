@@ -3,23 +3,23 @@ import KUTE from 'kute.js';
 require('kute.js/kute-svg');
 
 const svgStyle = {
-    enableBackground:"new 0 0 352.1 188.2"
+    enableBackground: 'new 0 0 352.1 188.2'
 };
 
 class LOTwo extends Component {
     componentDidMount() {
-        var tween = KUTE.fromTo(this.refs.LO2, {path: this.refs.LO2 }, { path: this.refs.LO2_End }, { easing: 'physicsBackInOut',
-            yoyo: true,  repeat: 1, duration: 3000, morphPrecision: 5,
-            morphIndex: 1998, complete:function(){
+        let tween = KUTE.fromTo(this.refs.LO2, {path: this.refs.LO2 }, { path: this.refs.LO2_End }, { easing: 'physicsBackInOut',
+            yoyo: true, repeat: 1, duration: 3000, morphPrecision: 5,
+            morphIndex: 1998, complete: function() {
                 tween.start();
             }
         }).start();
     }
 
-    render () {
+    render() {
         return (
-            <svg className="LO2_svg" version="1.1" id="Layer_1"  x="0px" y="0px" width="352.1px" height="188.2px" viewBox="0 0 352.1 188.2" style={svgStyle} >
-            <path ref="LO2" className="LO2" d="M310.9,126.4c-23-18.4-52-33.9-69.8-46.9
+            <svg className="LO2_svg" version="1.1" id="Layer_1" x="0px" y="0px" width="352.1px" height="188.2px" viewBox="0 0 352.1 188.2" style={svgStyle} >
+                <path ref="LO2" className="LO2" d="M310.9,126.4c-23-18.4-52-33.9-69.8-46.9
                 c28.2,12.7,53.9,26.5,79.8,43.7c-21.6-17.8-38.1-27.7-62.6-40.7c26.6,6.1,42.9,26.6,69.5,36.9c-28.8-17-41.8-30.1-60.3-38.6
                 c10.6-0.8,45.8,28.3,56.9,29.9c-7.9-6.1-13.4-6.1-41.6-28.3c3.8,0.8,24.8,12.8,39.6,22.3c-11.7-10.5-21.6-16.7-31.1-21.4
                 c20.1,3.9,27.8,17.9,46.4,25.3c-13.5-9.3-20.6-15.5-31-22.4c18.1,8,20.7,7.9,37.4,14.9c-11.6-7.5-22.4-9.8-34.6-16
@@ -79,11 +79,11 @@ class LOTwo extends Component {
                 c-23.4-17.5-44.1-28.8-65.5-43.5c20.6,8.8,75.2,44.3,84.8,47.2c-28.4-17.5-48.2-33.6-78.2-48.5c12.4,3,71.4,37.7,87.4,47.8
                 c-24.9-19-49.7-32.5-76.8-48c31.6,14.3,58.1,27.8,86.2,48.4c-6.9-10.9-58.2-39.8-75.9-49c25.1,7.7,46.1,24.1,70.1,38.2
                 c-15.6-12.7-44.2-31.2-65.2-40.7c28.8,12.2,55.7,26.5,80,46c-22.2-21.7-40.9-31.9-68.4-45.9C247.6,83.9,288.1,114.6,310.9,126.4z"/>
-            <path ref="LO2_root" className="LO2_root"  d="M1.8,187.9c20.4-49.4,43.6-77.7,108.1-98.9
+                <path ref="LO2_root" className="LO2_root" d="M1.8,187.9c20.4-49.4,43.6-77.7,108.1-98.9
                 c48.6-14.8,124.1-13.5,196.3-5.2c-47.7-8.6-61.7-7.6-80.6-8.5c-42.1-0.3-85.8,1.2-124.3,13.5c-34.9,12.7-53.1,26.4-60.6,33
                 C24.2,136.1-8.4,187.9,1.8,187.9z"/>
             </svg>
-        )
+        );
     }
 }
 

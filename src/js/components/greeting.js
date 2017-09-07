@@ -2,12 +2,11 @@ import React, { Component } from 'react';
 import classNames from 'classnames';
 
 class Greeting extends Component {
-
-    constructor(){
+    constructor() {
         super();
         this.state = {
             fadeout: false
-        }
+        };
     }
 
     componentDidMount() {
@@ -18,18 +17,16 @@ class Greeting extends Component {
         window.removeEventListener('scroll', this.scrollFade.bind(this));
     }
 
-    scrollFade () {
+    scrollFade() {
         if (window.pageYOffset >= 80) {
-            this.setState({ fadeout: true })
-        }
-        else if (window.pageYOffset < 100) {
-            this.setState({ fadeout: false })
+            this.setState({ fadeout: true });
+        } else if (window.pageYOffset < 100) {
+            this.setState({ fadeout: false });
         }
     }
 
-    render () {
-
-        const classes = classNames({greeting__content : true, fadeout: this.state.fadeout});
+    render() {
+        const classes = classNames({greetingContent: true, fadeout: this.state.fadeout});
 
         return (
             <div className="greeting">
@@ -43,7 +40,7 @@ class Greeting extends Component {
                     </div>
                 </div>
             </div>
-        )
+        );
     }
 }
 

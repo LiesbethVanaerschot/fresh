@@ -4,7 +4,7 @@ import Skills from './../components/skills';
 import Extras from './../components/extras';
 
 class About extends Component {
-    render () {
+    render() {
         return (
             <div className="section section--triangle section--about bg--white" ref="about">
                 <div className="container--small">
@@ -20,7 +20,7 @@ class About extends Component {
                     </div>
                 </div>
             </div>
-        )
+        );
     }
 }
 

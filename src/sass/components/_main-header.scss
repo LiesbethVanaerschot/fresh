@@ -4,7 +4,7 @@
 /* General
    ========================================================================== */
 
-$b : 'mainheader';
+$b: 'mainheader';
 
 .#{$b} {
     position: fixed;
@@ -83,13 +83,13 @@ $b : 'mainheader';
     &:nth-child(3) {
         padding-right: 0;
 
-        &:after {
+        &::after {
             left: calc(50% + 9px);
         }
     }
 
-    &:after {
-        content: "";
+    &::after {
+        content: '';
 
         position: absolute;
         left: 50%;
@@ -101,13 +101,13 @@ $b : 'mainheader';
 
         background-color: get-gray-color('lightest');
 
-        transform: translate3d(-50%,0, 0);
+        transform: translate3d(-50%, 0, 0);
 
         transition: all .3s ease-in-out;
     }
 
     &.active {
-        &:after {
+        &::after {
             height: 4px;
             bottom: 4px;
             background-color: get-gray-color('dark');
@@ -125,7 +125,7 @@ $b : 'mainheader';
             color: get-gray-color('dark');
             text-decoration: none;
 
-            &:after {
+            &::after {
                 height: 4px;
                 bottom: 4px;
             }

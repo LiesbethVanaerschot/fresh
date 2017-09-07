@@ -11,15 +11,12 @@ class Main extends Component {
                 <BrowserRouter>
                     <Header/>
                 </BrowserRouter>
-                {/*<Switch>*/}
-                    {/*<Route exact path='/about' component={About}/>*/}
-                {/*</Switch>*/}
                 <div className="content">
                     <Greeting />
                     <About/>
                 </div>
             </main>
-        )
+        );
     }
 }
 

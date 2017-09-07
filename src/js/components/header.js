@@ -3,12 +3,11 @@ import { Link } from 'react-router-dom';
 import classNames from 'classnames';
 
 class Header extends Component {
-
-    constructor(){
+    constructor() {
         super();
         this.state = {
             bgfade: false
-        }
+        };
     }
 
     componentDidMount() {
@@ -19,17 +18,15 @@ class Header extends Component {
         window.removeEventListener('scroll', this.scrollFade.bind(this));
     }
 
-    scrollFade () {
+    scrollFade() {
         if (window.pageYOffset >= 100) {
-            this.setState({ bgfade: true })
-        }
-        else if (window.pageYOffset < 100) {
-            this.setState({ bgfade: false })
+            this.setState({ bgfade: true });
+        } else if (window.pageYOffset < 100) {
+            this.setState({ bgfade: false });
         }
     }
 
-    render () {
-
+    render() {
         const classes = classNames({mainheader: true, bgfade: this.state.bgfade});
 
         return (
@@ -45,7 +42,7 @@ class Header extends Component {
                     </nav>
                 </div>
             </header>
-        )
+        );
     }
 }
 

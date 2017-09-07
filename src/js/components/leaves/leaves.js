@@ -10,7 +10,7 @@ import ROTwo from './ROTwo';
 import ROThree from './ROThree';
 
 class Leaves extends Component {
-    render () {
+    render() {
         return (
             <div className="leaves">
                 <div className="LB">
@@ -31,7 +31,7 @@ class Leaves extends Component {
                     <ROThree/>
                 </div>
             </div>
-        )
+        );
     }
 }
 
