@@ -1,7 +1,32 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import KUTE from 'kute.js';
+require('kute.js/kute-svg');
 
 class Coffee extends Component {
+    componentDidMount() {
+        let tween_1 = KUTE.fromTo(this.refs.heat_1, {rotateY: 0, translateY: 0}, {rotateY: 360, translateY: '2px'}, {transformOrigin: '50% 50%', easing: 'physicsBackInOut',
+            yoyo: true, repeat: 1, duration: 4000, morphPrecision: 5,
+            morphIndex: 1998, complete: function() {
+                tween_1.start();
+            }
+        }).start();
+
+        let tween_2 = KUTE.fromTo(this.refs.heat_2, {rotateY: 0, translateY: 0}, {rotateY: 360, translateY: '2px'}, {transformOrigin: '50% 50%', easing: 'physicsBackInOut',
+            yoyo: true, repeat: 1, duration: 4000, morphPrecision: 5,
+            morphIndex: 1998, complete: function() {
+                tween_2.start();
+            }
+        }).start();
+
+        let tween_3 = KUTE.fromTo(this.refs.heat_3, {rotateY: 0, translateY: 0}, {rotateY: 360, translateY: '2px'}, {transformOrigin: '50% 50%', easing: 'physicsBackInOut',
+            yoyo: true, repeat: 1, duration: 4000, morphPrecision: 5,
+            morphIndex: 1998, complete: function() {
+                tween_3.start();
+            }
+        }).start();
+    }
+
     render() {
         const width = this.props.width;
         const height = this.props.height;
@@ -15,10 +40,10 @@ class Coffee extends Component {
                     <path fill={accentcolor} d="M19.9,20c-0.4,0-0.9,0.1-1.3,0.2v1.4c0.3-0.2,0.8-0.3,1.3-0.3c1.3,0,2.4,1.1,2.4,2.3v1.2c0,1.3-1.1,2.3-2.4,2.3c-0.4,0-0.9-0.1-1.3-0.3v0.4c0,0.3,0,0.6-0.1,0.9c0.4,0.2,0.9,0.2,1.3,0.2c2,0,3.7-1.6,3.7-3.6v-1.2C23.6,21.6,21.9,20,19.9,20z"/>
                     <path fill={primarycolor} d="M3.6,33.9c0,0.3,0.3,0.6,0.6,0.6h10.2c0.3,0,0.6-0.3,0.6-0.6v-0.6H3.6V33.9z"/>
                 </g>
-                <g id="heat_1">
-                    <path fill="none" stroke={basicfill} d="M5.1,4.7c0,0-0.1,1,0.5,1.6s1.8,1.1,1.8,2.8S6.3,11,5.7,11.8c-0.4,0.6-0.4,1.5-0.4,1.5"/>
-                    <path fill="none" stroke={basicfill} d="M10.9,0.5c0,0,0.1,1-0.9,1.9S8.5,4.2,8.6,5S9.4,6.6,9.8,7c0.4,0.4,1.2,1,1.1,2s-0.7,1.8-1.3,2.2c-0.6,0.4-1,1.3-1,2"/>
-                    <path fill="none" stroke={basicfill} d="M11.9,4.7c0,0.4,0.1,1.2,0.7,1.8c0.5,0.6,1.7,1.2,1.6,2.3s-0.6,1.8-1.6,2.6c-0.7,0.5-0.6,1.8-0.6,1.8"/>
+                <g id="heat">
+                    <path ref="heat_1" fill="none" stroke={basicfill} d="M5.1,4.7c0,0-0.1,1,0.5,1.6s1.8,1.1,1.8,2.8S6.3,11,5.7,11.8c-0.4,0.6-0.4,1.5-0.4,1.5"/>
+                    <path ref="heat_2" fill="none" stroke={basicfill} d="M10.9,0.5c0,0,0.1,1-0.9,1.9S8.5,4.2,8.6,5S9.4,6.6,9.8,7c0.4,0.4,1.2,1,1.1,2s-0.7,1.8-1.3,2.2c-0.6,0.4-1,1.3-1,2"/>
+                    <path ref="heat_3" fill="none" stroke={basicfill} d="M11.9,4.7c0,0.4,0.1,1.2,0.7,1.8c0.5,0.6,1.7,1.2,1.6,2.3s-0.6,1.8-1.6,2.6c-0.7,0.5-0.6,1.8-0.6,1.8"/>
                 </g>
                 <g id="lines">
                     <path fill="none" stroke={basicfill} d="M3.6,32.8c-3-1.3-3.1-4.8-3.1-5.2s0-8.8,0-10.1s1.7-1.2,1.7-1.2h7.1c0,0,7.1,0,7.1,0s1.7-0.1,1.7,1.2s0,9.7,0,10.1S18,31.4,15,32.8"/>
