@@ -1,0 +1,12 @@
+$c: 'filter';
+
+.#{$c} {
+    display: inline-block;
+    width: calc(100% / 3);
+
+    text-align: center;
+
+    &__link {
+        font-family: $secondary-font--italic;
+    }
+}

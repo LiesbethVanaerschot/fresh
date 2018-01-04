@@ -1,0 +1,86 @@
+$c: 'project';
+
+.#{$c} {
+    &s {
+        padding: 50px 0;
+    }
+
+    position: relative;
+
+    display: block;
+    margin: 10px auto 20px auto;
+    width: 100%;
+    max-width: 300px;
+
+    &__inner {
+        position: relative;
+
+        width: 100%;
+        display: block;
+        overflow: hidden;
+
+        border: 3px solid get-gray-color('dark');
+
+        transform: translate3d(0, 0, 0);
+
+        transition: transform .3s ease-in-out;
+
+        &::after {
+            content: '';
+            display: block;
+            padding-bottom: 100%;
+        }
+    }
+
+    &__img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+
+        max-width: 400px;
+
+        transform: translate3d(-50%, -50%, 0);
+    }
+
+    &__hover {
+        position: absolute;
+        z-index: 0;
+
+        width: 100%;
+        display: block;
+
+        background-color: get-brand-color('groen', 'lightest');
+
+        opacity: 0;
+
+        transform: translate3d(0, 0, 0);
+
+        transition: opacity .3s ease-in-out, z-index .3s ease-in-out, transform .3s ease-in-out;
+
+        &::after {
+            content: '';
+            display: block;
+            padding-bottom: 100%;
+        }
+    }
+
+    &__content {
+        position: absolute;
+    }
+
+    @media (min-width: $breakpoint--md) {
+        max-width: 100%;
+
+        &:hover {
+            .#{$c}__hover {
+                z-index: 2;
+                opacity: 1;
+                transform: translate3d(-10px, -10px, 0);
+            }
+
+            .#{$c}__inner {
+                transform: translate3d(10px, 10px, 0);
+            }
+        }
+    }
+}

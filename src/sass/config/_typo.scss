@@ -1,6 +1,6 @@
 //== Typography
-$font-family-base:                  '...', sans-serif !default;
-$font-family-alt:                   '...', sans-serif !default;
+$font-family-base:                  $primary-font;
+$font-family-alt:                   $primary-font;
 
 $font-size-small:                   12px !default;
 $font-size-base:                    16px !default;

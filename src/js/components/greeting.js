@@ -20,7 +20,7 @@ class Greeting extends Component {
     scrollFade() {
         if (window.pageYOffset >= 80) {
             this.setState({ fadeout: true });
-        } else if (window.pageYOffset < 100) {
+        } else if (window.pageYOffset < 500) {
             this.setState({ fadeout: false });
         }
     }

@@ -1,0 +1,47 @@
+{
+  "title": "Work",
+  "text": "I am a 28 year old all-round creative based in Antwerp, Belgium. After my education as an interior designer, I have been developing a passion for the web.",
+  "filters": {
+    "1": "everything",
+    "2": "web",
+    "3": "cards"
+  },
+  "projects": {
+    "1": {
+      "title": "project 1",
+      "image" : "placeholder_1.jpg",
+      "url": "/",
+      "type": "web"
+    },
+    "2": {
+      "title": "project 2",
+      "image" : "placeholder_2.jpg",
+      "url": "#overlay",
+      "type": "graphic"
+    },
+    "3": {
+      "title": "project 3",
+      "image" : "placeholder_1.jpg",
+      "url": "/",
+      "type": "web"
+    },
+    "4": {
+      "title": "project 4",
+      "image" : "placeholder_2.jpg",
+      "url": "#overlay",
+      "type": "graphic"
+    },
+    "5": {
+      "title": "project 5",
+      "image" : "placeholder_1.jpg",
+      "url": "#overlay",
+      "type": "web"
+    },
+    "6": {
+      "title": "project 6",
+      "image" : "placeholder_2.jpg",
+      "url": "#overlay",
+      "type": "graphic"
+    }
+  }
+}

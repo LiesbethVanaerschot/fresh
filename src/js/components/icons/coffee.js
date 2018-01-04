@@ -5,24 +5,24 @@ require('kute.js/kute-svg');
 
 class Coffee extends Component {
     componentDidMount() {
-        let tween_1 = KUTE.fromTo(this.refs.heat_1, {rotateY: 0, translateY: 0}, {rotateY: 360, translateY: '2px'}, {transformOrigin: '50% 50%', easing: 'physicsBackInOut',
+        let tween1 = KUTE.fromTo(this.refs.heat_1, {rotateY: 0, translateY: 0}, {rotateY: 360, translateY: '2px'}, {transformOrigin: '50% 50%', easing: 'physicsBackInOut',
             yoyo: true, repeat: 1, duration: 4000, morphPrecision: 5,
             morphIndex: 1998, complete: function() {
-                tween_1.start();
+                tween1.start();
             }
         }).start();
 
-        let tween_2 = KUTE.fromTo(this.refs.heat_2, {rotateY: 0, translateY: 0}, {rotateY: 360, translateY: '2px'}, {transformOrigin: '50% 50%', easing: 'physicsBackInOut',
+        let tween2 = KUTE.fromTo(this.refs.heat_2, {rotateY: 0, translateY: 0}, {rotateY: 360, translateY: '2px'}, {transformOrigin: '50% 50%', easing: 'physicsBackInOut',
             yoyo: true, repeat: 1, duration: 4000, morphPrecision: 5,
             morphIndex: 1998, complete: function() {
-                tween_2.start();
+                tween2.start();
             }
         }).start();
 
-        let tween_3 = KUTE.fromTo(this.refs.heat_3, {rotateY: 0, translateY: 0}, {rotateY: 360, translateY: '2px'}, {transformOrigin: '50% 50%', easing: 'physicsBackInOut',
+        let tween3 = KUTE.fromTo(this.refs.heat_3, {rotateY: 0, translateY: 0}, {rotateY: 360, translateY: '2px'}, {transformOrigin: '50% 50%', easing: 'physicsBackInOut',
             yoyo: true, repeat: 1, duration: 4000, morphPrecision: 5,
             morphIndex: 1998, complete: function() {
-                tween_3.start();
+                tween3.start();
             }
         }).start();
     }

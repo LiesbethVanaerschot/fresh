@@ -63,21 +63,22 @@ class Extras extends Component {
 
     render() {
         const classes = classNames({skills: true, skillsExtra: true, show: this.state.show});
+        const flexClasses = classNames('flex-col', 'flex-col-xs--6', 'flex-col-sm--3');
 
         return (
             <div ref="extra" className={classes}>
                 <h3 className="skills__title">{data.extra.title}</h3>
-                <div className="flex flex--row-sm">
-                    <div className="flex__col-sm--3">
+                <div className="flex flex-xs">
+                    <div className={flexClasses}>
                         <Travel width="70" height="70" />
                     </div>
-                    <div className="flex__col-sm--3">
+                    <div className={flexClasses}>
                         <Plant width="70" height="70" />
                     </div>
-                    <div className="flex__col-sm--3">
+                    <div className={flexClasses}>
                         <Coffee width="70" height="70" />
                     </div>
-                    <div className="flex__col-sm--3">
+                    <div className={flexClasses}>
                         <Music width="70" height="70" />
                     </div>
                 </div>

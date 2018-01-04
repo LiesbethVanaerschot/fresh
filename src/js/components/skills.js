@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import classNames from 'classnames';
 import data from './../pages/data/about.json';
 
 class Skills extends Component {
@@ -26,11 +27,15 @@ class Skills extends Component {
             return item;
         });
 
+        const flex4 = classNames('flex-col', 'flex-col-sm--4');
+        const flex8 = classNames('flex-col', 'flex-col-sm--8');
+        const flexCol = classNames('flex-col', 'flex-col-sm--6');
+
         return (
             <div className="skills">
                 <h3 className="skills__title">{data.skills.title}</h3>
-                <div className="flex flex--row-sm">
-                    <div className="flex__col-sm--4">
+                <div className="flex flex-sm">
+                    <div className={flex4}>
                         <div className="skills__design">
                             <h4 className="skills__subtitle">{data.skills.design.title}</h4>
                             <ul className="skills__list">
@@ -38,14 +43,14 @@ class Skills extends Component {
                             </ul>
                         </div>
                     </div>
-                    <div className="flex__col-sm--8">
+                    <div className={flex8}>
                         <div className="skills__dev">
                             <h4 className="skills__subtitle">{data.skills.dev.title}</h4>
-                            <div className="flex flex--row-sm">
-                                <div className="flex__col-sm--6">
+                            <div className="flex flex-sm">
+                                <div className={flexCol}>
                                     {devOne}
                                 </div>
-                                <div className="flex__col-sm--6">
+                                <div className={flexCol}>
                                     {devTwo}
                                 </div>
                             </div>
