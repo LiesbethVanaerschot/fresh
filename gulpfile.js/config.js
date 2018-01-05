@@ -15,9 +15,10 @@ module.exports = {
         'fonts': {},
         'webpack': {
             'babel': {
-                'presets': [['es2015', { 'modules': false }]],
+                'presets': [['es2015', { 'modules': false }], 'react', 'stage-1'],
                 'plugins': [
-                    'transform-react-jsx'
+                    'transform-react-jsx',
+                    'transform-decorators-legacy'
                 ]
             },
             'entries': {

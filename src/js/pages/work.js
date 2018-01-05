@@ -3,14 +3,16 @@ import data from './data/work.json';
 import Filter from './../components/partials/filters';
 import Project from './../components/partials/project';
 
+import filtering from './../stores/filtering';
+
 class Work extends Component {
     render() {
         let filters = Object.keys(data.filters).map(function(key) {
-            return <Filter key={key} data-text={data.filters[key]}></Filter>;
+            return <Filter filtering={filtering} key={key} data-text={data.filters[key]}></Filter>;
         });
 
         let projects = Object.keys(data.projects).map(function(key) {
-            return <Project key={key} project-title={data.projects[key].title} project-img={data.projects[key].image} ></Project>;
+            return <Project key={key} project-type={data.projects[key].type} project-url={data.projects[key].url} project-title={data.projects[key].title} project-img={data.projects[key].image} ></Project>;
         });
 
         return (

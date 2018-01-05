@@ -14,7 +14,7 @@ module.exports = {
         'static': {},
         'webpack': {
             'babel': {
-                'presets': [['es2015', { 'modules': false }]],
+                'presets': [['es2015', { 'modules': false }], 'react', 'stage-1'],
                 'plugins': [
                     'transform-react-jsx'
                 ]

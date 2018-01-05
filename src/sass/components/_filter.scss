@@ -8,5 +8,11 @@ $c: 'filter';
 
     &__link {
         font-family: $secondary-font--italic;
+
+        &.active {
+            &::after {
+                width: 100%;
+            }
+        }
     }
 }

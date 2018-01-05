@@ -11,6 +11,7 @@ $c: 'project';
     margin: 10px auto 20px auto;
     width: 100%;
     max-width: 300px;
+    cursor: pointer;
 
     &__inner {
         position: relative;
@@ -19,7 +20,7 @@ $c: 'project';
         display: block;
         overflow: hidden;
 
-        border: 3px solid get-gray-color('dark');
+        border: 3px solid get-brand-color('munt');
 
         transform: translate3d(0, 0, 0);
 
@@ -49,7 +50,7 @@ $c: 'project';
         width: 100%;
         display: block;
 
-        background-color: get-brand-color('groen', 'lightest');
+        background-color: rgba(get-brand-color('groen', 'lightest'), .9);
 
         opacity: 0;
 
@@ -66,6 +67,16 @@ $c: 'project';
 
     &__content {
         position: absolute;
+        top: 50%;
+        left: 50%;
+
+        text-align: center;
+
+        transform: translate3d(-50%, -50%, 0);
+
+        * {
+            color: get-gray-color('lightest');
+        }
     }
 
     @media (min-width: $breakpoint--md) {

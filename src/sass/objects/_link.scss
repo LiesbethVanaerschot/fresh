@@ -10,11 +10,11 @@ $o: 'link';
         &::after {
             content: '';
             position: absolute;
-            right: 0;
+            left: 0;
             bottom: 0;
 
             display: block;
-            width: 100%;
+            width: 0;
             height: 2px;
 
             background-color: get-gray-color('dark');
@@ -25,7 +25,7 @@ $o: 'link';
         @media (min-width: $breakpoint--md) {
             &:hover {
                 &::after {
-                    width: 0;
+                    width: 100%;
                 }
             }
         }
