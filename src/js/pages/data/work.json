@@ -17,7 +17,7 @@
       "title": "project 2",
       "image" : "placeholder_2.jpg",
       "url": "#overlay",
-      "type": "graphic"
+      "type": "graphics"
     },
     "3": {
       "title": "project 3",
@@ -29,7 +29,7 @@
       "title": "project 4",
       "image" : "placeholder_2.jpg",
       "url": "#overlay",
-      "type": "graphic"
+      "type": "graphics"
     },
     "5": {
       "title": "project 5",
@@ -41,7 +41,7 @@
       "title": "project 6",
       "image" : "placeholder_2.jpg",
       "url": "#overlay",
-      "type": "graphic"
+      "type": "graphics"
     }
   }
 }

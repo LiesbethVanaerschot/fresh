@@ -1,14 +1,17 @@
 import React, { Component } from 'react';
+import { observer} from 'mobx-react';
+import {TransitionGroup} from 'react-transition-group';
 import data from './data/work.json';
+import Projects from './../components/projects';
 import Filter from './../components/partials/filters';
 import Project from './../components/partials/project';
 
 import filtering from './../stores/filtering';
 
-class Work extends Component {
+@observer class Work extends Component {
     render() {
         let filters = Object.keys(data.filters).map(function(key) {
-            return <Filter filtering={filtering} key={key} data-text={data.filters[key]}></Filter>;
+            return <Filter key={key} data-text={data.filters[key]}></Filter>;
         });
 
         let projects = Object.keys(data.projects).map(function(key) {
@@ -29,9 +32,9 @@ class Work extends Component {
                 </div>
                 <div className="container">
                     <div className="projects">
-                        <div className="flex">
+                        <TransitionGroup component={Projects}>
                             {projects}
-                        </div>
+                        </TransitionGroup>
                     </div>
                 </div>
             </div>

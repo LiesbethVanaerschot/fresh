@@ -1,29 +1,21 @@
 import { observable, action, computed } from 'mobx';
 
 class Filtering {
-    @observable active = {
-        everything: true,
-        web: false,
-        graphics: false
-    }
+    @observable active = 'everything';
+    @observable activeList = {
+        'everything': true,
+        'web': false,
+        'graphics': false
+    };
 
     @action.bound handleFilter(event, value) {
         event.preventDefault();
-        Object.keys(this.active).map((keyName, keyIndex) => {
-            if (value === keyName) {
-                this.active[value] = true;
-            } else {
-                this.active[keyName] = false;
-            }
-        });
+        this.active = value;
     }
 
     @computed get activeFilter() {
-        Object.keys(this.active)
-            .filter(keyName => this.active[keyName] === true)
-            .map((keyName, keyIndex) => {
-                return keyName;
-            });
+        console.log(this.active);
+        return this.active;
     }
 }
 

@@ -1,16 +1,19 @@
 import React, { Component } from 'react';
 import classNames from 'classnames';
+import { observer} from 'mobx-react';
 
 import data from './data/project.json';
 
-class Project extends Component {
+import filtering from './../../stores/filtering';
+
+@observer class Project extends Component {
     render() {
-        const flexCol = classNames('flex-col', 'flex-col-sm--6', 'flex-col-md--4');
+        const flexCol = classNames('flex-col', 'flex-col-sm--6', 'flex-col-md--4', {'hide': this.props['project-type'] === filtering.active});
         const projectClasses = classNames('project', {'project--web': this.props['project-type'] === 'web', 'project--graphic': this.props['project-type'] === 'graphic'});
         const btnClasses = classNames('btn', 'btn--white');
 
         return (
-            <div className={flexCol} data-type={this.props['project-url']}>
+            <div className={flexCol} data-type={this.props['project-type']}>
                 <a href={this.props['project-url']} className={projectClasses}>
                     <div className="project__hover">
                         <div className="project__content">
