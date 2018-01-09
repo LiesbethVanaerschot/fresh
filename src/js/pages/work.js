@@ -38,11 +38,11 @@ import filtering from './../stores/filtering';
                         >
                             { filtering.active !== 'everything' ? (
                                 filtering.selectedItems.slice(0, filtering.itemsToShow).map(function(key) {
-                                    return <Project key={key.id} project-type={data.projects[key.id].type} project-url={data.projects[key.id].url} project-title={data.projects[key.id].title} project-img={data.projects[key.id].image} ></Project>;
+                                    return <Project key={key.id} project-key={key.id} project-type={data.projects[key.id].type} project-url={data.projects[key.id].url} project-title={data.projects[key.id].title} project-img={data.projects[key.id].image} ></Project>;
                                 })
                             ) : (
                                 filtering.activeItems.slice(0, filtering.itemsToShow).map(function(key) {
-                                    return <Project key={key.id} project-type={data.projects[key.id].type} project-url={data.projects[key.id].url} project-title={data.projects[key.id].title} project-img={data.projects[key.id].image} ></Project>;
+                                    return <Project key={key.id} project-key={key.id} project-type={data.projects[key.id].type} project-url={data.projects[key.id].url} project-title={data.projects[key.id].title} project-img={data.projects[key.id].image} ></Project>;
                                 })
                             )}
                         </FlipMove>

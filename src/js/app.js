@@ -2,6 +2,7 @@ import {render} from 'react-dom';
 import React, { Component } from 'react';
 import Main from './components/routing/main';
 import Leaves from './components/leaves/leaves';
+import Modal from './components/partials/modal';
 
 class App extends Component {
     render() {
@@ -11,6 +12,7 @@ class App extends Component {
                 <Leaves/>
                 <div className="pattern-fixed">
                 </div>
+                <Modal></Modal>
             </div>
         );
     }
